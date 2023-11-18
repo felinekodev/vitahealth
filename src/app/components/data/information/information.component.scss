@@ -1,0 +1,55 @@
+.information-container {
+  background-color: #FFFFFF; // Fondo blanco
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+
+  .progress-container {
+    background-color: #eee;
+    border-radius: 8px;
+    margin: 20px 0;
+
+    .progress-bar {
+      height: 20px;
+      transition: width 0.3s ease-in-out;
+      border-radius: 8px;
+      &:nth-child(1) { background-color: #04AB6E; } // Verde
+      &:nth-child(2) { background-color: #007BFF; } // Azul
+      &:nth-child(3) { background-color: #FF395C; } // Rojo
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF; // Azul
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#007BFF, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="information-container">
+    <div class="progress-container">
+        <div class="progress-bar" [style.width]="progress + '%'"></div>
+    </div>
+
+<form (ngSubmit)="onSubmit()">
+    <div *ngIf="currentStep === 1">
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" [(ngModel)]="userInformation.altura" name="altura" required>
+    </div>
+
+    <div *ngIf="currentStep === 2">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" [(ngModel)]="userInformation.peso" name="peso" required>
+    </div>
+
+        <div *ngIf="currentStep === 3">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" [(ngModel)]="userInformation.edad" name="edad">
+        </div>
+
+        <div *ngIf="currentStep === 4">
+            <label for="genero">Género:</label>
+            <select id="genero" [(ngModel)]="userInformation.genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <button type="submit">Siguiente</button>
+    </form>
+</div>

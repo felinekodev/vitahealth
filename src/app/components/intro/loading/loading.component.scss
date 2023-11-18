@@ -1,0 +1,37 @@
+// Definición de colores en variables SCSS para reutilización
+$azul-oscuro: #242E49;
+$verde: #04AB6E;
+$azul: #007BFF;
+$rojo: #FF395C;
+
+// Utiliza los colores en el diseño del spinner y el texto de carga
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white; // Fondo azul oscuro para el contenedor
+
+  p {
+    color: $verde; // Texto en verde para contrastar con el fondo
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+}
+
+.spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3); // Borde parcialmente transparente
+  border-radius: 50%;
+  border-top: 5px solid $azul; // Color azul para la parte superior del spinner
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Aquí puedes continuar definiendo estilos globales o específicos para otros componentes utilizando las variables de colores.

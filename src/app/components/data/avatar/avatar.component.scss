@@ -1,0 +1,90 @@
+.avatar-container {
+  background-color: #FFFFFF; // Fondo blanco
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+
+  h2 {
+    color: #242E49; // Azul oscuro para el título
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #007BFF; // Azul para el texto
+    margin: 10px 0;
+  }
+
+  .user-image {
+    width: 250px;
+    height: 550px;
+   
+    object-fit: cover;
+    margin-bottom: 20px;
+
+  }
+
+
+
+
+  @media (max-width: 600px) {
+    .avatar-container {
+      padding: 15px;
+    }
+  }
+}
+
+.imctext{
+
+
+    color:red;
+}
+
+.imctext2{
+
+font-weight: 900;
+    color:rgb(6, 153, 26);
+}
+
+// avatar.component.scss
+.avatar-container {
+  // ...estilos existentes...
+
+  button {
+    padding: 10px 15px;
+    background-color: #04AB6E; // Color del botón
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+
+    &:hover {
+      background-color: darken(#04AB6E, 10%);
+    }
+  }
+}
+// avatar.component.scss
+.avatar-container {
+  // ...otros estilos...
+
+  // Estilos para el botón
+  button {
+    display: block; // Hace que el botón sea un bloque para permitir centrarlo
+    margin: 20px auto; // Centra el botón horizontalmente y añade margen arriba y abajo
+    padding: 10px 20px;
+    background-color: #04AB6E; // Color de fondo
+    color: white; // Color del texto
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: darken(#04AB6E, 10%); // Oscurece el color al pasar el ratón por encima
+    }
+  }
+}

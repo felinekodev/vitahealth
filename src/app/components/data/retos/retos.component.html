@@ -1,0 +1,11 @@
+<!-- retos.component.html -->
+<div class="retos-container">
+    <div *ngFor="let reto of retos; let i = index" class="reto-item"
+        [ngClass]="{'dormir': reto.categoria === 'Dormir', 'nutricion': reto.categoria === 'Nutrición', 'running': reto.categoria === 'Running'}">
+        <div class="reto-info">
+            <input type="checkbox" [(ngModel)]="reto.completado">
+            <h3>{{ reto.categoria }}: {{ reto.descripcion }}</h3>
+        </div>
+        <button (click)="completarReto(i)" [disabled]="!reto.completado">Completar Reto</button>
+    </div>
+</div>

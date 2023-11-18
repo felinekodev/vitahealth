@@ -1,0 +1,18 @@
+<img src="assets/logo-vita-health.png" alt="User Image" width="95%" class="user-image">
+
+<div class="avatar-container">
+    <!-- Imágenes basadas en el IMC -->
+<img *ngIf="imc !== null && (imc < 18.5 || imc > 24.9)" src="assets/bodygordichi.png"
+    alt="User Image Overweight"  class="user-image">
+<img *ngIf="imc !== null && imc >= 18.5 && imc <= 24.9" src="assets/bodyhuman.png" alt="User Image Normal"
+     class="user-image">
+
+    <h2>Información del Usuario</h2>
+    <p>Altura: {{userInformation?.altura}} <span class="imctext2">cm</span> </p>
+    <p>Peso: {{userInformation?.peso}} kg</p>
+    <p>Edad: {{userInformation?.edad}}</p>
+    <p>Género: {{userInformation?.genero}}</p>
+    <p  *ngIf="imc"> <span class="imctext">IMC: </span> <span class="imctext2">{{ imc.toFixed(1) }}</span></p>
+    <p *ngIf="healthMessage">{{ healthMessage }}</p>
+</div>
+<button (click)="navigateToLogros()">IR A RETOS</button>

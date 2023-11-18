@@ -1,0 +1,61 @@
+// retos.component.scss
+.retos-container {
+  .reto-item {
+    background-color: #ffffff; // Fondo blanco para cada reto
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      margin: 0;
+    }
+
+    .reto-info {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+
+    &.dormir {
+      border-left: 5px solid #04AB6E; // Verde para dormir
+      button {
+        background-color: #04AB6E;
+      }
+    }
+
+    &.nutricion {
+      border-left: 5px solid #007BFF; // Azul para nutrición
+      button {
+        background-color: #007BFF;
+      }
+    }
+
+    &.running {
+      border-left: 5px solid #FF395C; // Rojo para running
+      button {
+        background-color: #FF395C;
+      }
+    }
+  }
+}
